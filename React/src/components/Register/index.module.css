@@ -1,0 +1,17 @@
+.row-register {
+    padding-top: 20px;
+    padding-bottom: 75px;
+    background-color: #F0F0F0;
+}
+  
+.register-form {
+    text-align: center;
+    padding-bottom: 17px;
+}
+
+.form-group {
+    width: 25%;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: left;
+}

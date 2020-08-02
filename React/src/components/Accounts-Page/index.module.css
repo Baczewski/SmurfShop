@@ -1,0 +1,23 @@
+.noaccounts {
+    text-align: center;
+    font-size: 70px;
+}
+
+.button {
+    margin-left: 47.8%;
+    width: 100px;
+    height: 50px;
+    color: navy;
+    font-size: 20px;
+}
+
+.button:hover {
+    text-decoration: none;
+}
+
+.image {
+    width: 300px;
+    height: 300px;
+    margin-left: 40.3%;
+    padding-bottom: 20px;
+}

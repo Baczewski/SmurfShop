@@ -1,0 +1,40 @@
+.div-main {
+    display: flex;
+    text-align: center;
+}
+
+.img {
+    width: 100px;
+    height: 100px;
+}
+
+.div-mid {
+    margin-left: 50px;
+}
+
+.parent {
+    padding-left: 18.5%;
+    padding-top: 4%;
+    padding-bottom: 160px;
+    background-color: ghostwhite;
+    /* padding-right: 20% */
+}
+
+.span {
+    font-size: 20px;
+}
+
+.description {
+    font-size: 17px;
+    margin-top: 25px;
+    width: 254px;
+    height: 190px;
+    text-align: justify;
+}
+
+.h2 {
+    text-align: left;
+    font-style: italic;
+    margin-left: 50px;
+    padding-bottom: 55px;
+}

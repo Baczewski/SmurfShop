@@ -1,0 +1,25 @@
+.button {
+    color: white;
+    background-color: #007bff;
+    border-color: #007bff;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+.container {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.message {
+    text-align: center;
+    font-size: 20px;
+}
+
+.emoji {
+    width: 100px;
+    height: 100px;
+}

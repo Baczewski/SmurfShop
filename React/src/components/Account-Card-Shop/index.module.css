@@ -1,0 +1,32 @@
+.div-image {
+    height: 300px;
+    width: 300px;
+    text-align: center;
+}
+
+.main-div {
+    margin: 100px 99px 0 99px;
+    padding-bottom: 200px;
+    /* width: 33%; */
+    width: 300px;
+    float: left;
+    text-align: center;
+    
+}
+
+.div-text {
+    text-align: center;
+    font-size: 20px;
+    padding-left: 30px;
+}
+
+.ul {
+    list-style: none;
+    font-size: 19px;
+    padding-top: 15px;
+}
+
+.image {
+    width: 300px;
+    height: 300px;
+}

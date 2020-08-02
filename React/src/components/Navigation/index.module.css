@@ -1,0 +1,26 @@
+.logo-navy {
+    font-size: 25px;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.logo-navy {
+    color: navy;
+}
+
+
+.div-user {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.logo-navy:hover {
+    color: black;
+}
+
+.navbar {
+    /* position: fixed; */
+    border-bottom: 1px black solid;
+    height: auto;
+    background-color: #3D9970;
+}

@@ -1,0 +1,28 @@
+.create-form {
+    text-align: center;
+}
+
+.row-create {
+    padding: 20px 0px 200px 0px;
+    background-image: url('https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-hero-00e10b1f.jpg');
+    color: whitesmoke;
+}
+
+.form-group {
+    width: 25%;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+.create-button {
+    width: 10%;
+    height: 45px;
+}
+
+.header {
+    text-align: center;
+    padding-bottom: 20px;
+}

@@ -10,10 +10,14 @@ const Edit = (props) => {
 
     useEffect(() => {
         (async () => {
-            const smurfxd = await smurfService.loadOne(smurfId)
-            setSmurf(smurfxd)
+            const foundSmurf = await smurfService.loadOne(smurfId)
+            setSmurf(foundSmurf)
         })()
     }, [smurfId])
+
+    if (!Object.keys(smurf).length) {
+        return (<div className="loading-div"></div>);
+    }
 
     return (
         <Fragment>

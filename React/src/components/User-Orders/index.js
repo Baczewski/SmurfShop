@@ -26,7 +26,7 @@ const UserOrders = () => {
                     <Link to="/" className="btn empty-cart-btn">Go Shopping</Link>
                 </div>
             ) : (
-                    <div className="row row-silver row-orders">
+                    <div className={styles.div}>
                         <div className="col-md-12">
                             <table className="table">
                                 <thead>

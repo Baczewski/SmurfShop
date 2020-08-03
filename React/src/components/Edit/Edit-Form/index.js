@@ -35,14 +35,14 @@ const schema = yup.object().shape({
 
 const EditForm = ({ smurf, smurfId, history }) => {
 
-    const [region, setRegion] = useState('')
-    const [rank, setRank] = useState('')
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('')
-    const [champions, setChampions] = useState('')
-    const [skins, setSkins] = useState('')
-    const [price, setPrice] = useState('')
-    const [rare, setRare] = useState('')
+    const [region, setRegion] = useState(smurf.region)
+    const [rank, setRank] = useState(smurf.rank)
+    const [username, setUsername] = useState(smurf.username)
+    const [password, setPassword] = useState(smurf.password)
+    const [champions, setChampions] = useState(smurf.champions)
+    const [skins, setSkins] = useState(smurf.skins)
+    const [price, setPrice] = useState(smurf.price)
+    const [rare, setRare] = useState(smurf.rare)
     const [type, setType] = useState('unverified')
 
     const formSubmit = async (event) => {
@@ -65,8 +65,8 @@ const EditForm = ({ smurf, smurfId, history }) => {
                     <form onSubmit={formSubmit} className={styles["create-form"]}>
                         <div className={styles['form-group']}>
                             <label htmlFor='region'>Region</label>
-                            <input onChange={ev => setRegion(ev.target.value)} value={region}
-                                type='text' id='region' className='form-control' />
+                            <input onChange={ev => setRegion(ev.target.value)}
+                                type='text' id='region' className='form-control' value={region} />
                         </div>
                         <div className={styles['form-group']}>
                             <label htmlFor='rank'>Rank</label>
@@ -106,7 +106,7 @@ const EditForm = ({ smurf, smurfId, history }) => {
                         <div className={styles['form-group']}>
                             <label htmlFor='type'>Type of account: </label>
                             <select onChange={ev => setType(ev.target.value)} value={type} className='form-control size-select'>
-                                <option selected={true} value='unverified'>Unverified</option>
+                                <option value='unverified'>Unverified</option>
                                 <option value='champion-account'>Champion account</option>
                                 <option value='premium-champion'>Premium champion account</option>
                             </select>

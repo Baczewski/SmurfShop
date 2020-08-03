@@ -23,6 +23,7 @@ import Cart from './components/Cart'
 import UserOrders from './components/User-Orders'
 import PendingOrders from './components/Pending-Orders'
 import Edit from './components/Edit'
+import UserPage from './components/UserPage'
 
 toast.configure()
 
@@ -40,6 +41,8 @@ function App() {
                 {/* <Route path='/register' component={Register} /> */}
                 <Route path='/about' component={About} />
                 <Route path='/shop' component={Shop} />
+
+                {isLogged && isAdmin ? (<Route path='/users' component={UserPage}/>) : null}
 
                 <Route exact path='/accounts/:accountType' component={AccountsPage} />
                 <Route path='/accounts/:accountType/:id' component={Details} />

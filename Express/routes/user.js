@@ -14,4 +14,6 @@ router.post('/login', controllers.user.post.login)
 
 router.post('/logout', controllers.user.post.logout)
 
+router.put('/status/:id', auth.permitAdminUser, controllers.user.ban)
+
 module.exports = router

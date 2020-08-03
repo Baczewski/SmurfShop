@@ -34,6 +34,10 @@ const userService = {
             throw new Error('Unauthorized!')
         }
 
+        if (response.status === 403) {
+            throw new Error('You have been banned, contact admin!')
+        }
+
         return response.json()
     },
     logout: async () => {
@@ -59,6 +63,29 @@ const userService = {
         if (response.status === 401) {
             throw new Error('Unauthorized!')
         }
+
+        return response.json()
+    },
+    all: async () => {
+        const response = await fetch('http://localhost:8080/api/user', {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            method: 'GET',
+            credentials: 'include'
+        })
+
+        return response.json()
+    },
+    ban: async (newStatus, id) => {
+        const response = await fetch(`http://localhost:8080/api/user/status/${id}`, {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            method: 'PUT',
+            credentials: 'include',
+            body: JSON.stringify({ status: newStatus })
+        })
 
         return response.json()
     }

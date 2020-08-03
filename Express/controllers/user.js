@@ -65,6 +65,11 @@ module.exports = {
                     res.status(401).send({ msg: 'Invalid password!' })
                     return
                 }
+
+                if (user.status === 'Banned') {
+                    res.status(403).send({ msg: 'You are banned!' })
+                    return
+                }
                 const token = jwt.createToken(user)
 
                 res.cookie(config.authCookieName, token, { maxAge: 3600000 })
@@ -85,6 +90,17 @@ module.exports = {
             const { id } = req.params
             const deletionInfo = await models.User.deleteOne({ _id: id })
             res.json(deletionInfo)
+
+        } catch (err) {
+            next(err)
+        }
+    },
+    ban: async (req, res, next) => {
+        try {
+            const { id } = req.params
+            const { status } = req.body
+            const updatedStatus = await models.User.updateOne({ _id: id }, { status })
+            res.json(updatedStatus)
 
         } catch (err) {
             next(err)

@@ -33,6 +33,8 @@ const Navigation = () => {
                     {!isLogged && !isAdmin ? (<LinkComponent location='/register' text='Register' />) : null}
 
                     {isLogged ? (<LinkComponent location='' func={handleLogout} text='Logout' />) : null}
+
+                    {isLogged && isAdmin ? (<LinkComponent location='/users' text='Users' />) : null}
                     {isLogged && isAdmin ? (<LinkComponent location='/create' text='Add an account' />) : null}
                     {isLogged && isAdmin ? (<LinkComponent location="/admin/pending-orders" text='Pending Orders'/>) : null}
 

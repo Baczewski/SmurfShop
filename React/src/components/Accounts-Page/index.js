@@ -18,7 +18,7 @@ const AccountsPage = (props) => {
     }, [type])
 
     return (
-        <Fragment>
+        <Fragment> 
             {accounts.filter(x => x.region.includes(filter)).length ? (<Fragment>
                 <div className={styles.search}>
                     <label htmlFor='filter'>Search by region:</label>

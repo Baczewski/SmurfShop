@@ -32,7 +32,7 @@ class Points extends React.Component {
                 </div>
                 <div className={styles[message]}>Nothing is free in this life, expect our instant delivery</div>
                 <div className={styles[emojiDiv]}>
-                    <img className={styles.emoji} src="https://cdn.shopify.com/s/files/1/0430/2359/7719/files/Fleet_Footwork_rune.png?v=1594382024" />
+                    <img alt='shopify' className={styles.emoji} src="https://cdn.shopify.com/s/files/1/0430/2359/7719/files/Fleet_Footwork_rune.png?v=1594382024" />
                 </div>
             </Fragment>
         )

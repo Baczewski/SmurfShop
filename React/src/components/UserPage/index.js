@@ -24,7 +24,7 @@ const UserPage = () => {
                     </thead>
                     <tbody>
                         {users.map(({ username, status, _id, role }) => {
-                            return <UserStatus username={username} password={status} _id={_id} setUsers={setUsers} user={role}/>
+                            return <UserStatus key={_id} username={username} password={status} _id={_id} setUsers={setUsers} user={role}/>
                         })}
                     </tbody>
                 </table>

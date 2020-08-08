@@ -8,7 +8,7 @@ const userService = {
             body: JSON.stringify(data)
         })
 
-        if (response.status == 422) {
+        if (response.status === 422) {
             const parsedResponse = await response.json()
 
             if (parsedResponse.msg.includes('email')) {
@@ -35,7 +35,7 @@ const userService = {
         }
 
         if (response.status === 403) {
-            throw new Error('You have been banned, contact admin!')
+            throw new Error('You have been banned, please contact the admin for more information about the restriction!')
         }
 
         return response.json()

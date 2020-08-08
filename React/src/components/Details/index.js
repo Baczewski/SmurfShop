@@ -23,10 +23,10 @@ const Details = (props) => {
 
     const handleAddToCart = useCallback(async (event) => {
         event.preventDefault()
-        await cartService.addToCart({ name: smurf.type, price: smurf.price, username:smurf.username,password:smurf.password })
+        await cartService.addToCart({ name: smurf.type, price: smurf.price, username: smurf.username, password: smurf.password })
         props.history.push('/shop')
         toast.success(`${smurf.type} account successfully added to your cart!`)
-    }, [smurf.type, smurf.price, props.history])
+    }, [smurf.type, smurf.price, props.history, smurf.username, smurf.password])
 
     const handleDelete = useCallback(async (event) => {
         event.preventDefault()
@@ -47,9 +47,9 @@ const Details = (props) => {
                     <p className={styles.bold}>
                         {reduce[smurf.type]}
                     </p>
-                    <p><span className={styles.bold}>Category:</span> {(smurf.type)}</p>
+                    <p><span className={styles.bold}>Category:</span> {(smurf.type ? smurf.type.split('-').join(' ') : smurf.type)}</p>
                     <p><span className={styles.bold}>Ordered: </span> {smurf.ordersCount} times</p>
-                    <p><span className={styles.bold}>Price: </span>${smurf.price}</p>
+                    <p><span className={styles.bold}>Price: </span>{smurf.price}</p>
                     {isLogged && !isAdmin ? (<Link to="" onClick={handleAddToCart} className={styles.button}>Add to Cart</Link>) : null}
                     {isLogged && isAdmin ? (
                         <Fragment>

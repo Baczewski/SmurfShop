@@ -36,13 +36,12 @@ function App() {
           <UserContext.Consumer>
             {({ isLogged, isAdmin }) => (
               <Switch>
+                
                 <Route path='/' exact component={Homepage} />
-                {/* <Route path='/login' component={Login} /> */}
-                {/* <Route path='/register' component={Register} /> */}
                 <Route path='/about' component={About} />
                 <Route path='/shop' component={Shop} />
 
-                {isLogged && isAdmin ? (<Route path='/users' component={UserPage}/>) : null}
+                {isLogged && isAdmin ? (<Route path='/users' component={UserPage} />) : null}
 
                 <Route exact path='/accounts/:accountType' component={AccountsPage} />
                 <Route path='/accounts/:accountType/:id' component={Details} />
@@ -57,7 +56,6 @@ function App() {
                 {isLogged && !isAdmin ? (<Route path="/user/cart" component={Cart} />) : null}
                 {isLogged && !isAdmin ? (<Route path="/user/orders" component={UserOrders} />) : null}
 
-                {/* <Route path='/create' component={CreateAccount} /> */}
                 <Route component={PageNotFound} />
               </Switch>
             )}

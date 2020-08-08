@@ -17,7 +17,7 @@ const UserStatus = (props) => {
 
     return (
         <Fragment>
-            <tr className={styles.tr}>
+            <tr key={props._id} className={styles.tr}>
                 <td>{props.username}</td>
                 <td>{props.password}</td>
                 {props.user === 'admin' ? (null) : (

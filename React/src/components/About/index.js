@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import styles from './index.module.css'
 import { helper } from '../../utils/about-utils'
-import { Link } from 'react-router-dom'
 
 const About = () => {
     return (
@@ -11,7 +10,7 @@ const About = () => {
                 <div className={styles["div-main"]}>
                     <div className={styles["div-mid"]}>
                         <div >
-                            <img className={styles.img} src={helper.grasp.link} />
+                            <img alt='grasp' className={styles.img} src={helper.grasp.link} />
                             <div className={styles.span}>{helper.grasp.title}</div>
                             <div className={styles.description}>
                                 {helper.grasp.description}
@@ -20,7 +19,7 @@ const About = () => {
                     </div>
                     <div className={styles["div-mid"]}>
                         <div>
-                            <img className={styles.img} src={helper.arcane.link} />
+                            <img alt='arcane' className={styles.img} src={helper.arcane.link} />
                             <div className={styles.span}>{helper.arcane.title}</div>
                             <div className={styles.description}>
                                 {helper.arcane.description}
@@ -29,7 +28,7 @@ const About = () => {
                     </div>
                     <div className={styles["div-mid"]}>
                         <div>
-                            <img className={styles.img} src={helper.fleet.link} />
+                            <img alt='fleet' className={styles.img} src={helper.fleet.link} />
                             <div className={styles.span}>{helper.fleet.title}</div>
                             <div className={styles.description}>
                                 {helper.fleet.description}

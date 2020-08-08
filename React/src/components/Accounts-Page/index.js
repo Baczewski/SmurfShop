@@ -9,21 +9,28 @@ const AccountsPage = (props) => {
     const type = props.match.params.accountType
 
     const [accounts, setAccounts] = useState([])
+    const [filter, setFilter] = useState('')
 
     useEffect(() => {
         (async () => {
             setAccounts(await smurfService.loadAll(type))
-            // const accs = await smurfService.loadAll(type)
         })()
-    }, [])
+    }, [type])
 
     return (
         <Fragment>
-            {accounts.length ? (<Fragment>
-                {accounts.map((acc) => {
-                    return <Product image={helper.image}
+            {accounts.filter(x => x.region.includes(filter)).length ? (<Fragment>
+                <div className={styles.search}>
+                    <label htmlFor='filter'>Search by region:</label>
+                    <input id='filter' onChange={e => setFilter(e.target.value)} />
+                </div>
+            </Fragment>) : null}
+
+            {accounts.filter(x => x.region.includes(filter)).length ? (<Fragment>
+                {accounts.filter(x => x.region.includes(filter)).map((acc) => {
+                    return <Product key={acc._id} image={helper.image}
                         location={`/accounts/${acc.type}/${acc._id}`}
-                        text={`Account price: ${acc.price}`}
+                        text={`Price - Region: ${acc.price} - ${acc.region}`}
                         value1={`Account rank: ${acc.rank}`}
                         value2={`Number of champions: ${acc.champions}`}
                         value3={`Number of skins: ${acc.skins}`} />

@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import styles from './index.module.css'
 import { helper } from '../../utils/about-utils'
+import AboutCard from '../About-Card'
 
 const About = () => {
     return (
@@ -8,33 +9,9 @@ const About = () => {
             <div className={styles["parent"]}>
                 <h2 className={styles["h2"]}>WE PROVIDE:</h2>
                 <div className={styles["div-main"]}>
-                    <div className={styles["div-mid"]}>
-                        <div >
-                            <img alt='grasp' className={styles.img} src={helper.grasp.link} />
-                            <div className={styles.span}>{helper.grasp.title}</div>
-                            <div className={styles.description}>
-                                {helper.grasp.description}
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles["div-mid"]}>
-                        <div>
-                            <img alt='arcane' className={styles.img} src={helper.arcane.link} />
-                            <div className={styles.span}>{helper.arcane.title}</div>
-                            <div className={styles.description}>
-                                {helper.arcane.description}
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles["div-mid"]}>
-                        <div>
-                            <img alt='fleet' className={styles.img} src={helper.fleet.link} />
-                            <div className={styles.span}>{helper.fleet.title}</div>
-                            <div className={styles.description}>
-                                {helper.fleet.description}
-                            </div>
-                        </div>
-                    </div>
+                    <AboutCard src={helper.grasp.link} title={helper.grasp.title} description={helper.grasp.description} />
+                    <AboutCard src={helper.arcane.link} title={helper.arcane.title} description={helper.arcane.description} />
+                    <AboutCard src={helper.fleet.link} title={helper.fleet.title} description={helper.fleet.description} />
                 </div>
             </div>
         </Fragment>

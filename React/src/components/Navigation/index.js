@@ -18,7 +18,7 @@ const Navigation = () => {
     return (
         <Fragment>
             <Navbar className={styles.navbar} variant="dark">
-                <span className={styles["logo-navy"]} to="/about" >Traffik Hub</span>
+                <span className={styles["logo-navy"]} to="/about" >OdinSmurfs</span>
                 <Nav className={styles.container}>
                     {/* User */}
                     <LinkComponent location='/about' text='About us' />
@@ -28,7 +28,6 @@ const Navigation = () => {
                     {isLogged && !isAdmin ? (<LinkComponent location="/user/orders" text='My Orders' />) : null}
                 </Nav>
                 <Nav className={styles["div-user"]}>
-
                     {!isLogged && !isAdmin ? (<LinkComponent location='/login' text='Login' />) : null}
                     {!isLogged && !isAdmin ? (<LinkComponent location='/register' text='Register' />) : null}
 
@@ -36,7 +35,7 @@ const Navigation = () => {
 
                     {isLogged && isAdmin ? (<LinkComponent location='/users' text='Users' />) : null}
                     {isLogged && isAdmin ? (<LinkComponent location='/create' text='Add an account' />) : null}
-                    {isLogged && isAdmin ? (<LinkComponent location="/admin/pending-orders" text='Pending Orders'/>) : null}
+                    {isLogged && isAdmin ? (<LinkComponent location="/admin/pending-orders" text='Pending Orders' />) : null}
 
                     {isLogged && user ? (<LinkComponent location='' text={`Hello, ${user.username}`} />) : null}
                 </Nav>

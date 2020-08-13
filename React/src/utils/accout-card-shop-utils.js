@@ -18,7 +18,7 @@ const helper = {
     premium: {
         location: '/accounts/premium-champion',
         image: 'https://smurf.shop/wp-content/uploads/2019/01/premium-champion-accounts.jpg',
-        text: 'Premium chamion accounts',
+        text: 'Premium champion accounts',
         value1: 'Lifetime warranty',
         value2: 'Email and Password changable',
         value3: 'Suited to be your new main'

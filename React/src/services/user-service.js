@@ -31,7 +31,7 @@ const userService = {
         })
 
         if (response.status === 401) {
-            throw new Error('Unauthorized!')
+            throw new Error('Wrong email or password!')
         }
 
         if (response.status === 403) {

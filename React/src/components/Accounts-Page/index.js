@@ -4,12 +4,15 @@ import Product from './Product'
 import { helper } from '../../utils/shop-accounts-utils'
 import styles from './index.module.css'
 import { Link } from 'react-router-dom'
+import ScrollButton from '../Scroll-Button'
 
 const AccountsPage = (props) => {
     const type = props.match.params.accountType
 
     const [accounts, setAccounts] = useState([])
     const [filter, setFilter] = useState('')
+
+    const checkFilter = accounts.filter(x => x.region.includes(filter))
 
     useEffect(() => {
         (async () => {
@@ -18,23 +21,23 @@ const AccountsPage = (props) => {
     }, [type])
 
     return (
-        <Fragment> 
-            {accounts.filter(x => x.region.includes(filter)).length ? (<Fragment>
+        <Fragment>
+            <Fragment>
                 <div className={styles.search}>
                     <label htmlFor='filter'>Search by region:</label>
                     <input id='filter' onChange={e => setFilter(e.target.value)} />
                 </div>
-            </Fragment>) : null}
+            </Fragment>
 
-            {accounts.filter(x => x.region.includes(filter)).length ? (<Fragment>
-                {accounts.filter(x => x.region.includes(filter)).map((acc) => {
+            {checkFilter.length ? (<Fragment>
+                {checkFilter.map((acc) => {
                     return <Product key={acc._id} image={helper.image}
                         location={`/accounts/${acc.type}/${acc._id}`}
                         text={`Price - Region: ${acc.price} - ${acc.region}`}
-                        value1={`Account rank: ${acc.rank}`}
-                        value2={`Number of champions: ${acc.champions}`}
-                        value3={`Number of skins: ${acc.skins}`} />
+                        values={[`Account rank: ${acc.rank}`, `Number of champions: ${acc.champions}`, `Number of skins: ${acc.skins}`]}
+                    />
                 })}
+                {/* {checkFilter.length > 3 ? (<ScrollButton />) : null} */}
             </Fragment>) :
                 (<Fragment>
                     <div className={styles.noaccounts} role="status">Out of stock</div>

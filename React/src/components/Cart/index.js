@@ -42,8 +42,8 @@ const Cart = (props) => {
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        {cartItems.map(({ _id, name, price, date, username, password }) =>
-                                            <CartItem key={_id} _id={_id} type={name} price={price} date={date} 
+                                        {cartItems.map(({ _id, name, price, date }) =>
+                                            <CartItem key={_id} _id={_id} type={name} price={price} date={date}
                                                 setCartItems={setCartItems} />)}
                                     </tbody>
                                 </table>

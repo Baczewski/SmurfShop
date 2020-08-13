@@ -18,13 +18,14 @@ const UserPage = () => {
                 <table className='table'>
                     <thead>
                         <tr>
+                            <th scope='col'>Email</th>
                             <th scope='col'>Username</th>
                             <th scope='col'>Status</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {users.map(({ username, status, _id, role }) => {
-                            return <UserStatus key={_id} username={username} password={status} _id={_id} setUsers={setUsers} user={role}/>
+                        {users.map(({ username, status, _id, role, email }) => {
+                            return <UserStatus key={_id} email={email} username={username} status={status} _id={_id} setUsers={setUsers} user={role} />
                         })}
                     </tbody>
                 </table>

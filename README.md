@@ -1,6 +1,6 @@
-# eSmurf - smurf accounts React Ecommerce Application
+# OdinSmurfs - smurf accounts React Ecommerce Application
 
-eSmurf is an eCommerce application built on ReactJS and NodeJS as a project for the SoftUni ReactJS Course. It's purpose is to provide different types of smurfs (with BE or with many champions). The application also provides admin functionality where everything can be easily maganged - accept or decline orders, create and modify smurf, ban/unban users.
+OdinSmurfs is an eCommerce application built on ReactJS and NodeJS as a project for the SoftUni ReactJS Course. It's purpose is to provide different types of smurfs (with BE or with many champions). The application also provides admin functionality where everything can be easily maganged - accept or decline orders, create and modify smurf, ban/unban users.
 
 The application has three levels of accessibility: guest user, administrator and registered user
 

@@ -42,7 +42,7 @@ const AccountsPage = (props) => {
                 (<Fragment>
                     <div className={styles.loading}>
                         <div className={styles.noaccounts} role="status">Out of stock</div>
-                        <img className={styles.image} src='https://www.vippng.com/png/detail/244-2440853_png-file-svg-sad-face-icon-transparent-background.png'/>
+                        <img alt='smurf' className={styles.image} src='https://www.vippng.com/png/detail/244-2440853_png-file-svg-sad-face-icon-transparent-background.png'/>
                         <Link to='/shop' className={styles.button}>Go back</Link>
                     </div>
                 </Fragment>)}

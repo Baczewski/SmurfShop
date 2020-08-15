@@ -13,12 +13,9 @@ const Cart = (props) => {
 
     useEffect(() => {
         (async () => {
-            const userItems = await cartService.loadAll()
-            setCartItems(userItems)
+            setCartItems(await cartService.loadAll())
         })()
     }, [])
-    console.log(cartItems)
-
 
     return (
         <Fragment>

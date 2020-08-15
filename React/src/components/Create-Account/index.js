@@ -97,7 +97,7 @@ const CreateAccount = (props) => {
                         <div className={styles['form-group']}>
                             <label htmlFor='type'>Type of account: </label>
                             <select onChange={ev => setType(ev.target.value)} value={type} className='form-control size-select'>
-                                <option selected={true} value='unverified'>Unverified</option>
+                                <option value='unverified'>Unverified</option>
                                 <option value='champion-account'>Champion account</option>
                                 <option value='premium-champion'>Premium champion account</option>
                             </select>

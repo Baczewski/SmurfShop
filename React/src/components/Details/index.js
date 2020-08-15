@@ -32,7 +32,7 @@ const Details = (props) => {
         event.preventDefault()
         await smurfService.delete(id)
         redirectWithNotification(props.history, `/accounts/${accountType}`, 'error', `${smurf.type} account has been removed from the shop!`)
-    }, [props.history, smurf.type])
+    }, [props.history, smurf.type, accountType, id])
 
     return (
         <Fragment>

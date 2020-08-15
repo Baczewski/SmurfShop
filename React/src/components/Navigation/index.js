@@ -27,7 +27,7 @@ const Navigation = () => {
 
                     {isLogged && !isAdmin ? (<LinkComponent location="/user/orders" text='My Orders' />) : null}
                     {isLogged && !isAdmin ? (<LinkComponent location="/user/cart" text={
-                        <i class="fa fa-shopping-cart fa-lg"></i>
+                        <i className="fa fa-shopping-cart fa-lg"></i>
                     } />) : null}
                 </Nav>
                 <Nav className={styles["div-user"]}>

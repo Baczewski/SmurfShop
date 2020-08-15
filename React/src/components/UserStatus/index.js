@@ -10,18 +10,18 @@ const UserStatus = (props) => {
         await userService.ban('Banned', props._id)
         props.setUsers(await userService.all())
         toast.error('Successfully banned a user')
-    }, [props._id, props.setUsers])
+    }, [props])
 
     const handleActiveClick = useCallback(async () => {
         await userService.ban('Active', props._id)
         props.setUsers(await userService.all())
         toast.success('Successfully unbanned a user')
-    }, [props._id, props.setUsers])
+    }, [props])
 
     return (
         <Fragment>
             <tr key={props._id} className={styles.tr}>
-                <div>{props.date}</div>
+                <td>{props.date}</td>
                 {props.user === 'admin' ? <td className={styles.red}>Hidden for security seasons</td> : <td>{props.email}</td>}
                 <td>{props.username}</td>
                 <td className={props.status === 'Banned' ? (styles.red) : (styles.green)}>{props.status}</td>

@@ -4,9 +4,9 @@ import AccountCardShop from '../Account-Card-Shop'
 import { helper } from '../../utils/accout-card-shop-utils'
 
 class Shop extends React.Component {
-    constructor(props) {
-        super(props)
-    }
+    // constructor(props) {
+    //     super(props)
+    // }
 
     render() {
         return (

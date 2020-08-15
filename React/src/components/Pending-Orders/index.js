@@ -25,7 +25,7 @@ const PendingOrders = () => {
                     <Link to="/" className={styles.link}>Home</Link>
                 </div>
             </Fragment>
-        );
+        )
     }
 
     return (

@@ -12,6 +12,7 @@ const Footer = () => {
                         <i class="fa fa-cc-mastercard fa-lg" aria-hidden="true"></i>
                         <i class="fa fa-cc-visa fa-lg" style={{marginLeft: 10 }} aria-hidden="true"></i>
                         <i class="fa fa-btc fa-lg" style={{marginLeft: 10 }} aria-hidden="true"></i>
+                        <i class="fa fa-paypal fa-lg" style={{marginLeft: 10 }} aria-hidden="true"></i>
                     </span>
                 </div>
             </footer>

@@ -27,8 +27,6 @@ const schema = yup.object().shape({
     price: yup.string()
         .required('Price is required!')
         .min(1, 'Price should be at least 1 symbol!'),
-    rare: yup.string()
-        .default('No rare content'),
     type: yup.string()
         .notOneOf(['Choose type'], 'Please choose account type!')
 })
@@ -42,15 +40,14 @@ const CreateAccount = (props) => {
     const [champions, setChampions] = useState('')
     const [skins, setSkins] = useState('')
     const [price, setPrice] = useState('')
-    const [rare, setRare] = useState('')
     const [type, setType] = useState('unverified')
 
     const formSubmit = async (event) => {
         event.preventDefault()
 
         try {
-            await schema.validate({ region, rank, username, password, champions, skins, price, rare, type }, { abortEarly: false })
-            await smurfService.create({ region, rank, username, password, champions, skins, price, rare, type })
+            await schema.validate({ region, rank, username, password, champions, skins, price, type }, { abortEarly: false })
+            await smurfService.create({ region, rank, username, password, champions, skins, price, type })
             redirectWithNotification(props.history, '/', 'success', 'Account created successfully!')
         } catch (err) {
             handleErrors(err)
@@ -96,11 +93,6 @@ const CreateAccount = (props) => {
                             <label htmlFor='price'>Price</label>
                             <input onChange={ev => setPrice(ev.target.value)} value={price}
                                 type='text' id='price' className='form-control' />
-                        </div>
-                        <div className={styles['form-group']}>
-                            <label htmlFor='rare'>Rare content</label>
-                            <textarea onChange={ev => setRare(ev.target.value)} value={rare}
-                                type='text' id='rare' className='form-control' />
                         </div>
                         <div className={styles['form-group']}>
                             <label htmlFor='type'>Type of account: </label>

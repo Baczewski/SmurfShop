@@ -29,4 +29,11 @@
 .image {
     width: 300px;
     height: 300px;
+    border-radius: 50px;
+    border: brown 2px solid;
+}
+
+.image:hover {
+    /* border: 12px solid black; */
+    transform: scale(1.05);
 }

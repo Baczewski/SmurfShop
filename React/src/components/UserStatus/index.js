@@ -21,6 +21,7 @@ const UserStatus = (props) => {
     return (
         <Fragment>
             <tr key={props._id} className={styles.tr}>
+                <div>{props.date}</div>
                 {props.user === 'admin' ? <td className={styles.red}>Hidden for security seasons</td> : <td>{props.email}</td>}
                 <td>{props.username}</td>
                 <td className={props.status === 'Banned' ? (styles.red) : (styles.green)}>{props.status}</td>

@@ -41,23 +41,25 @@ const Login = (props) => {
     }, [email, password, props.history, setUser])
 
     return (
-        <Fragment>
-            <Header header='Login' />
-            <div className={styles["row-login"]}>
-                <div className="col-md-12">
-                    <form onSubmit={handleSubmit} className={styles["login-form"]}>
-                        <div className={styles["form-group"]}>
-                            <label htmlFor="email">Email</label>
-                            <input onChange={ev => setEmail(ev.target.value)} value={email}
-                                className="form-control" type="text" id="email" placeholder="Email" />
-                        </div>
-                        <div className={styles["form-group"]}>
-                            <label htmlFor="password">Password</label>
-                            <input onChange={ev => setPassword(ev.target.value)} value={password}
-                                className="form-control" type="password" id="password" placeholder="Password" />
-                        </div>
-                        <button type="submit" className="btn btn-primary form-btn">Login</button>
-                    </form>
+        <Fragment >
+            <div className={styles.back}>
+                <Header header='Login' />
+                <div className={styles["row-login"]}>
+                    <div className="col-md-12">
+                        <form onSubmit={handleSubmit} className={styles["login-form"]}>
+                            <div className={styles["form-group"]}>
+                                <label htmlFor="email">Email</label>
+                                <input onChange={ev => setEmail(ev.target.value)} value={email}
+                                    className="form-control" type="text" id="email" placeholder="Email" />
+                            </div>
+                            <div className={styles["form-group"]}>
+                                <label htmlFor="password">Password</label>
+                                <input onChange={ev => setPassword(ev.target.value)} value={password}
+                                    className="form-control" type="password" id="password" placeholder="Password" />
+                            </div>
+                            <button type="submit" className="btn btn-primary form-btn">Login</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </Fragment>

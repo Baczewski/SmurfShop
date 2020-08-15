@@ -21,9 +21,11 @@ const UserOrders = () => {
         <Fragment>
             <h2 className={styles.header}>My Orders</h2>
             {!orders.length ? (
-                <div className="col-md-12 col-empty-cart">
-                    <h2 className="empty-cart-heading">There are currently no orders from your account...</h2>
-                    <Link to="/" className="btn empty-cart-btn">Go Shopping</Link>
+                <div className={styles.container}>
+                    <div className="col-md-12 col-empty-cart">
+                        <h2 className="empty-cart-heading">There are currently no orders from your account...</h2>
+                        <Link to="/shop" className="btn empty-cart-btn">Go Shopping</Link>
+                    </div>
                 </div>
             ) : (
                     <div className={styles.div}>

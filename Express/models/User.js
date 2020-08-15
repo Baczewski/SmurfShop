@@ -33,6 +33,10 @@ const userSchema = new mongoose.Schema({
     status: {
         type: Schema.Types.String,
         default: 'Active'
+    },
+    date: {
+        type: Schema.Types.String,
+        default: new Date(Date.now()).toLocaleString()
     }
 })
 

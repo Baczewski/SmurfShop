@@ -48,35 +48,37 @@ const Register = (props) => {
 
     return (
         <Fragment>
-            <Header header='Register' />
-            <div className={styles["row-register"]}>
-                <div className="col-md-12">
-                    <form className={styles["register-form"]} onSubmit={handleSubmit}>
-                        <div className={styles["form-group"]}>
-                            <label htmlFor="email">Email</label>
-                            <input onChange={ev => setEmail(ev.target.value)} value={email}
-                                className="form-control" type="text" id="email" placeholder="Email" />
-                            <small id="emailHelp" className="form-text text-muted">
-                                We'll never share your email adress with anyone else. </small>
-                        </div>
-                        <div className={styles["form-group"]}>
-                            <label htmlFor="username">Username</label>
-                            <input onChange={ev => setUsername(ev.target.value)} value={username}
-                                className="form-control" type="text" id="username" placeholder="Username" />
-                        </div>
-                        <div className={styles["form-group"]}>
-                            <label htmlFor="password">Password</label>
-                            <input onChange={ev => setPassword(ev.target.value)} value={password}
-                                className="form-control" type="password" id="password" placeholder="Password" />
-                        </div>
-                        <div className={styles["form-group"]}>
-                            <label htmlFor="rePassword">Repeat Password</label>
-                            <input onChange={ev => setRePassword(ev.target.value)} value={rePassword}
-                                className="form-control" type="password" id="rePassword" placeholder="Password" />
-                        </div>
-                        <button type="submit" className="btn btn-primary form-btn">Register</button>
-                    </form>
-                    <Points />
+            <div className={styles.back}>
+                <Header header='Register' />
+                <div className={styles["row-register"]}>
+                    <div className="col-md-12">
+                        <form className={styles["register-form"]} onSubmit={handleSubmit}>
+                            <div className={styles["form-group"]}>
+                                <label htmlFor="email">Email</label>
+                                <input onChange={ev => setEmail(ev.target.value)} value={email}
+                                    className="form-control" type="text" id="email" placeholder="Email" />
+                                <small id="emailHelp" className="form-text text-muted">
+                                    We'll never share your email adress with anyone else. </small>
+                            </div>
+                            <div className={styles["form-group"]}>
+                                <label htmlFor="username">Username</label>
+                                <input onChange={ev => setUsername(ev.target.value)} value={username}
+                                    className="form-control" type="text" id="username" placeholder="Username" />
+                            </div>
+                            <div className={styles["form-group"]}>
+                                <label htmlFor="password">Password</label>
+                                <input onChange={ev => setPassword(ev.target.value)} value={password}
+                                    className="form-control" type="password" id="password" placeholder="Password" />
+                            </div>
+                            <div className={styles["form-group"]}>
+                                <label htmlFor="rePassword">Repeat Password</label>
+                                <input onChange={ev => setRePassword(ev.target.value)} value={rePassword}
+                                    className="form-control" type="password" id="rePassword" placeholder="Password" />
+                            </div>
+                            <button type="submit" className="btn btn-primary form-btn">Register</button>
+                        </form>
+                        <Points />
+                    </div>
                 </div>
             </div>
         </Fragment>

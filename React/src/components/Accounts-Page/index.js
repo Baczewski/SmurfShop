@@ -4,7 +4,7 @@ import Product from './Product'
 import { helper } from '../../utils/shop-accounts-utils'
 import styles from './index.module.css'
 import { Link } from 'react-router-dom'
-import ScrollButton from '../Scroll-Button'
+// import ScrollButton from '../Scroll-Button'
 
 const AccountsPage = (props) => {
     const type = props.match.params.accountType

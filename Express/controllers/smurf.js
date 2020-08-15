@@ -21,8 +21,8 @@ module.exports = {
     },
     edit: async (req, res, next) => {
         try {
-            const { region, rank, username, password, champions, skins, price, rare, type } = req.body
-            const updatedSmurf = await models.Smurf.updateOne({ _id: req.params.id }, { region, rank, username, password, champions, skins, price, rare, type })
+            const { region, rank, username, password, champions, skins, price, type } = req.body
+            const updatedSmurf = await models.Smurf.updateOne({ _id: req.params.id }, { region, rank, username, password, champions, skins, price, type })
             res.json(updatedSmurf)
         } catch (err) {
             next(err)
@@ -30,8 +30,8 @@ module.exports = {
     },
     post: async (req, res, next) => {
         try {
-            const { region, rank, username, password, champions, skins, price, rare, type } = req.body
-            const createdSmurf = await models.Smurf.create({ region, rank, username, password, champions, skins, price, rare, type })
+            const { region, rank, username, password, champions, skins, price, type } = req.body
+            const createdSmurf = await models.Smurf.create({ region, rank, username, password, champions, skins, price, type })
             res.json(createdSmurf)
         } catch (err) {
             next(err)

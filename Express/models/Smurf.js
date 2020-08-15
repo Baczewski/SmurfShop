@@ -5,7 +5,8 @@ const SmurfSchema = new Schema({
     region: {
         type: Schema.Types.String,
         required: [true, 'Region is required!'],
-        minlength: [2, 'Regions should be at least 2 symbols!']
+        minlength: [2, 'Regions should be at least 2 symbols!'],
+        uppercase: [true, 'Region should contains only uppercase symbols!']
     },
     rank: {
         type: Schema.Types.String,
@@ -46,10 +47,6 @@ const SmurfSchema = new Schema({
         type: Schema.Types.String,
         required: [true, 'Price is required!'],
         minlength: [1, 'Price should be at least 1 symbol!']
-    },
-    rare: {
-        type: Schema.Types.String,
-        default: 'No rare skins'
     },
     type: {
         type: Schema.Types.String

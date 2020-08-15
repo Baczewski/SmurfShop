@@ -12,5 +12,9 @@
   
 .row-login {
     padding: 20px 0px 200px 0px;
-    background-color: #F0F0F0;
+    /* background-color: #F0F0F0; */
+}
+
+.back {
+  background-color: #F0F0F0;
 }

@@ -1,7 +1,7 @@
 .row-register {
     padding-top: 20px;
     padding-bottom: 75px;
-    background-color: #F0F0F0;
+    /* background-color: #F0F0F0; */
 }
   
 .register-form {
@@ -14,4 +14,11 @@
     margin: auto;
     margin-bottom: 20px;
     text-align: left;
+}
+
+.back {
+    background-image: url('https://www.supersmurfs.com/wp-content/uploads/2020/03/annie.png');
+    background-repeat: no-repeat;
+    background-position-x: 99%;
+    background-color: #F0F0F0;
 }

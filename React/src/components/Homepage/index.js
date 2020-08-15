@@ -31,9 +31,9 @@ const Homepage = () => {
                         <Fragment>
                             <div className={styles.heading}>New here?</div>
                             <div className={styles.links}>
-                                <Link to='/shop' className={styles.link}>Shop</Link>
-                                <Link to='/register' className={styles.link}>Register</Link>
-                                <Link to='/login' className={styles.link}>Login</Link>
+                                <Link data-test-id='home-Shop' to='/shop' className={styles.link}>Shop</Link>
+                                <Link data-test-id='home-Register' to='/register' className={styles.link}>Register</Link>
+                                <Link data-test-id='home-Login' to='/login' className={styles.link}>Login</Link>
                             </div>
                         </Fragment>
                     )}

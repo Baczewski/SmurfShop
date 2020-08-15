@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css'
 import Navigation from './components/Navigation'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 import Footer from './components/Footer'
 import Homepage from './components/Homepage'
 import Login from './components/Login'
@@ -36,25 +36,25 @@ function App() {
           <UserContext.Consumer>
             {({ isLogged, isAdmin }) => (
               <Switch>
-                
+                {/* Everyone can access */}
                 <Route path='/' exact component={Homepage} />
                 <Route path='/about' component={About} />
                 <Route path='/shop' component={Shop} />
-
-                {isLogged && isAdmin ? (<Route path='/users' component={UserPage} />) : null}
-
                 <Route exact path='/accounts/:accountType' component={AccountsPage} />
                 <Route path='/accounts/:accountType/:id' component={Details} />
 
-                {!isLogged && !isAdmin ? (<Route path='/login' component={Login} />) : null}
-                {!isLogged && !isAdmin ? (<Route path='/register' component={Register} />) : null}
+                {/* Registered users can access */}
+                {isLogged && !isAdmin ? (<Route path="/user/cart" component={Cart} />) : null}
+                {isLogged && !isAdmin ? (<Route path="/user/orders" component={UserOrders} />) : null}
 
+                {/* Admin can access */}
                 {isLogged && isAdmin ? (<Route path='/create' component={CreateAccount} />) : null}
                 {isLogged && isAdmin ? (<Route path="/admin/pending-orders" component={PendingOrders} />) : null}
                 {isLogged && isAdmin ? (<Route path='/smurf/edit/:accountType/:id' component={Edit} />) : null}
-
-                {isLogged && !isAdmin ? (<Route path="/user/cart" component={Cart} />) : null}
-                {isLogged && !isAdmin ? (<Route path="/user/orders" component={UserOrders} />) : null}
+                {isLogged && isAdmin ? (<Route path='/users' component={UserPage} />) : null}
+                
+                {!isLogged && !isAdmin ? (<Route path='/login' component={Login} />) : null}
+                {!isLogged && !isAdmin ? (<Route path='/register' component={Register} />) : null}
 
                 <Route component={PageNotFound} />
               </Switch>

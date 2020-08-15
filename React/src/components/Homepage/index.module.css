@@ -6,6 +6,7 @@
     background-color: grey;
     background-repeat: no-repeat;
     width: 100%;
+    animation: fadeIn 2s;
 }
 
 .header {
@@ -50,3 +51,12 @@
     margin-top: 25px;
     font-size: 40px;
 }
+
+@keyframes fadeIn {
+    from {
+       opacity: 0;
+    }
+    to {
+       opacity: 1;
+    }
+ } 

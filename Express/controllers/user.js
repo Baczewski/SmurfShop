@@ -45,8 +45,13 @@ module.exports = {
                 }
 
                 const createdUser = await models.User.create({ username, email, password })
+
                 res.json(createdUser)
             } catch (err) {
+                if (err.code === 11000 && err.name === 'MongoError') {
+                    res.status(422).send({ msg: err.message })
+                    return
+                }
                 next(err)
             }
         },

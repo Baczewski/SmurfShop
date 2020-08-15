@@ -31,9 +31,16 @@
     height: 300px;
     border-radius: 50px;
     border: brown 2px solid;
+    animation-name: example;
+    animation-duration: 5s;
 }
 
 .image:hover {
     /* border: 12px solid black; */
     transform: scale(1.05);
 }
+
+@keyframes example {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}  

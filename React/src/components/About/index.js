@@ -8,7 +8,7 @@ const About = () => {
         <Fragment>
             <div className={styles["parent"]}>
                 <h2 className={styles["h2"]}>WE PROVIDE:</h2>
-                <div className={styles["div-main"]}>
+                <div id='about-div' className={styles["div-main"]}>
                     <AboutCard src={helper.grasp.link} title={helper.grasp.title} description={helper.grasp.description} />
                     <AboutCard src={helper.arcane.link} title={helper.arcane.title} description={helper.arcane.description} />
                     <AboutCard src={helper.fleet.link} title={helper.fleet.title} description={helper.fleet.description} />

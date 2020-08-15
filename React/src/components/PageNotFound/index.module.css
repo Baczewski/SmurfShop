@@ -2,7 +2,6 @@
     text-align: center;
     padding-bottom: 400px;
     font-size: 30px;
-    background-color: #e3f2fd;
 }
 
 .link {
@@ -14,4 +13,8 @@
     text-decoration: none;
     color: red;
     font-style: italic;
+}
+
+.full {
+    background-color: #e3f2fd;
 }

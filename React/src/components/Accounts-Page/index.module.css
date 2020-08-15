@@ -26,3 +26,12 @@
     text-align: center;
     margin-top: 10px;
 }
+
+.loading {
+    animation: fadeIn 7s;
+}
+
+@keyframes fadeIn{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

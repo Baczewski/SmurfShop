@@ -40,9 +40,11 @@ const AccountsPage = (props) => {
                 {/* {checkFilter.length > 3 ? (<ScrollButton />) : null} */}
             </Fragment>) :
                 (<Fragment>
-                    <div className={styles.noaccounts} role="status">Out of stock</div>
-                    <img src='https://pngimage.net/wp-content/uploads/2019/05/angel-emoji-black-and-white-png-.png' className={styles.image} />
-                    <Link to='/shop' className={styles.button}>Go back</Link>
+                    <div className={styles.loading}>
+                        <div className={styles.noaccounts} role="status">Out of stock</div>
+                        <img className={styles.image} src='https://www.vippng.com/png/detail/244-2440853_png-file-svg-sad-face-icon-transparent-background.png'/>
+                        <Link to='/shop' className={styles.button}>Go back</Link>
+                    </div>
                 </Fragment>)}
 
         </Fragment>

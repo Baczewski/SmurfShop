@@ -31,6 +31,7 @@ const userService = {
         })
 
         if (response.status === 401) {
+            console.log(response)
             throw new Error('Wrong email or password!')
         }
 

@@ -4,7 +4,7 @@ import styles from './index.module.css'
 
 const LinkComponent = (props) => {
     return (
-        <Link onClick={props.func} className={styles.link} to={props.location}>{props.text}</Link>
+        <Link data-test-id={`link-${props.text}`} onClick={props.func} className={styles.link} to={props.location}>{props.text}</Link>
     )
 }
 
